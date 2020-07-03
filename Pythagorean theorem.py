@@ -22,7 +22,7 @@ def find_value_a():
     a_squared = operator.sub(h_squared, b_squared)
     if a_squared < 0:
         print('There is no square root of negative numbers')
-        raise ZeroDivisionError
+        raise Exception(f'{ZeroDivisionError} there is no square root of negative numbers.')
     a = operator.pow(a_squared, 0.5)
     print(f'Value of a is {a}')
     main()
@@ -36,7 +36,7 @@ def find_value_b():
     b_squared = operator.sub(h_squared, a_squared)
     if b_squared < 0:
         print('There is no square root of negative numbers')
-        raise ZeroDivisionError
+        raise Exception(f'{ZeroDivisionError} there is no square root of negative numbers.')
     b = operator.pow(b_squared, 0.5)
     print(f'Value of b is {b}')
     main()
@@ -50,7 +50,7 @@ def find_value_c():
     h_squared = operator.add(b_squared, a_squared)
     if h_squared < 0:
         print('There is no square root of negative numbers')
-        raise ZeroDivisionError
+        raise Exception(f'{ZeroDivisionError} there is no square root of negative numbers.')
     h = operator.pow(h_squared, 0.5)
     print(f'Value of h is {h}')
     main()

@@ -4,7 +4,7 @@ import operator
 def main():
     while True:
         print('''Please enter the quadratic by giving these values:
-            ax^2+bx+c=y''')
+            ax^2+bx+c=0''')
         a = float(input('Value of a: '))
         b = float(input('Value of b: '))
         c = float(input('Value of c: '))
@@ -12,7 +12,7 @@ def main():
         in_square_root_value = operator.add(operator.pow(b, 2), in_square_root_value_1)
         if in_square_root_value < 0:
             print('There is no square root of negative numbers')
-            raise ZeroDivisionError
+            raise Exception(f'{ZeroDivisionError} There is no square root of negative numbers.')
         else:
             square_root_value = operator.pow(in_square_root_value, 0.5)
             ans_1_working_out_1 = operator.sub(operator.mul(b, -1), square_root_value)

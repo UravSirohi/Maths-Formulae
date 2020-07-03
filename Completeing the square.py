@@ -3,10 +3,13 @@ import operator
 
 def main():
     print('''Please enter the quadratic by giving these values:
-    ax^2+bx+c=y''')
-    a = int(input('Value of a: '))
-    b = int(input('Value of b: '))
-    c = int(input('Value of c: '))
+    ax^2+bx+c=y.''')
+    a = float(input('Value of a: '))
+    b = float(input('Value of b: '))
+    c = float(input('Value of c: '))
+    if a < 0:
+        print('There is no square root of negative numbers')
+        raise ZeroDivisionError
     root_of_a = operator.pow(a, 0.5)
     equa_part_1 = operator.mul(b, operator.truediv(1 / 2, root_of_a))
     ans_calc_part_2 = operator.pow(equa_part_1, 2)
